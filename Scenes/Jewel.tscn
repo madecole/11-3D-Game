@@ -3,10 +3,12 @@
 [ext_resource path="res://Assets/GLTF format/jewel.glb" type="PackedScene" id=1]
 
 [sub_resource type="SpatialMaterial" id=1]
-albedo_color = Color( 1, 0, 0, 1 )
+albedo_color = Color( 0, 0.321569, 1, 1 )
 
-[node name="Jewel" index="0" instance=ExtResource( 1 )]
+[node name="Jewel" instance=ExtResource( 1 )]
 
 [node name="jewel" parent="jewel(Clone)" index="0"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.537807, -0.5 )
+transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0.547568, 0 )
 material/0 = SubResource( 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="jewel(Clone)/jewel" index="0"]
