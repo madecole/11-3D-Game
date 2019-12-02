@@ -758,7 +758,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.98118, -0.0119975, 21.2672 )
 transform = Transform( 0.0817272, 0.699391, -0.710052, 0.969229, 0.110207, 0.220111, 0.232197, -0.706192, -0.668863, -8.75764, 28.0052, 37.0769 )
 
 [node name="FP Character" type="KinematicBody" parent="."]
-editor/display_folded = true
 script = ExtResource( 6 )
 
 [node name="Body" type="CollisionShape" parent="FP Character"]

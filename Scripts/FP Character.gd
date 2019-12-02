@@ -1,7 +1,7 @@
 extends KinematicBody
 
 onready var camera = $RotationPivot/Camera
-onready var rotation_pivot = $RotationPivot
+"onready var rotation_pivot = $RotationPivot"
 
 var gravity = -30
 var max_speed = 8
@@ -23,10 +23,10 @@ func get_input():
 	return input_dir
 
 func _unhandled_input(event):
-	if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
-		rotation_pivot.rotate_x(-event.relative.y * mouse_sensitivity)
-		rotate_y(-event.rotate.x * mouse_sensitivity)
-		$RotationPivot.rotate_x = clamp(rotation_pivot.rotation.x, -1.2, 1.2)
+	if event is InputEventMouseMotion:
+		rotate_y(-event.relative.x * mouse_sensitivity)
+		$RotationPivot.rotate_x(-event.relative.y * mouse_sensitivity)
+		$RotationPivot.rotation.x = clamp($RotationPivot.rotation.x, -1.2, 1.2)
 
 func _physics_process(delta):
 	velocity.y += gravity * delta
